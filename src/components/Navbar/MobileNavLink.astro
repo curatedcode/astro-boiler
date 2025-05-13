@@ -1,0 +1,13 @@
+---
+interface Props extends astroHTML.JSX.AnchorHTMLAttributes {}
+
+const { href, ...props } = Astro.props;
+---
+
+<a
+	href={href}
+	class="hover:text-custom-brown font-medium py-2 block"
+	{...props}
+>
+	<slot />
+</a>

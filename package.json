@@ -1,0 +1,42 @@
+{
+	"name": "starter-v1",
+	"type": "module",
+	"version": "0.0.1",
+	"license": "MIT",
+	"author": "Your Name me@starter-v1.com",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/curatedcode/starter-v1.git"
+	},
+	"homepage": "https://starter-v1.com",
+	"bugs": {
+		"url": "https://github.com/curatedcode/starter-v1/issues"
+	},
+	"keywords": [
+		"astro"
+	],
+	"scripts": {
+		"dev": "astro dev --port=3000 --host",
+		"build": "pnpm lint && astro build",
+		"preview": "astro preview --host",
+		"astro": "astro",
+		"test": "playwright test",
+		"lint": "pnpm exec prettier . --write"
+	},
+	"dependencies": {
+		"@astrojs/alpinejs": "^0.4.6",
+		"@tailwindcss/vite": "^4.1.4",
+		"alpinejs": "^3.14.9",
+		"astro": "^5.7.4",
+		"tailwindcss": "^4.1.4"
+	},
+	"devDependencies": {
+		"@axe-core/playwright": "^4.10.1",
+		"@playwright/test": "^1.52.0",
+		"@types/alpinejs": "^3.13.11",
+		"@types/node": "^22.14.1",
+		"prettier": "3.5.3",
+		"prettier-plugin-astro": "0.14.1",
+		"typescript": "^5.8.3"
+	}
+}

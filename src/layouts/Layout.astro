@@ -1,0 +1,97 @@
+---
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar/Navbar.astro";
+import "../styles/global.css";
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg?v=1.0" />
+		<meta name="description" content="SITE_DESCRIPTION" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="theme-color" content="THEME_COLOR" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+		<link rel="manifest" href="/manifest.json" />
+		<script
+			is:inline
+			async
+			src="https://unpkg.com/pwacompat"
+			cross-origin="anonymous"></script>
+
+		<title>{title}</title>
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@SITE_TWITTER" />
+		<meta name="twitter:url" content="SITE_LIVE_URL" />
+		<meta name="twitter:title" content="SITE_TITLE" />
+		<meta name="twitter:description" content="SITE_DESCRIPTION" />
+		<meta name="twitter:image" content="SITE_LIVE_URL/icons/social-card.png" />
+
+		<!-- Open Graph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="SITE_TITLE" />
+		<meta property="og:description" content="SITE_DESCRIPTION" />
+		<meta property="og:site_name" content="SITE_TITLE" />
+		<meta property="og:url" content="SITE_LIVE_URL" />
+		<meta property="og:image" content="SITE_LIVE_URL/icons/social-card.png" />
+
+		<!-- Apple touch icon -->
+		<link
+			rel="apple-touch-icon"
+			sizes="120x120"
+			href="/icons/apple-touch-icon_120.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="152x152"
+			href="/icons/apple-touch-icon_152.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="167x167"
+			href="/icons/apple-touch-icon_167.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/icons/apple-touch-icon_180.png"
+		/>
+
+		<!-- Fonts -->
+		<!-- <link
+			rel="preload"
+			href="/fonts/CUSTOM_FONT.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin="anonymous"
+		/> -->
+	</head>
+	<body>
+		<script>
+			if ("serviceWorker" in navigator) {
+				window.addEventListener("load", function () {
+					navigator.serviceWorker.register("/serviceWorker.js").then(() => {
+						console.log("SW registration successful");
+					});
+				});
+			}
+		</script>
+		<div class="flex flex-col min-h-screen">
+			<Navbar />
+			<main class="min-h-[calc(100vh-68px)]">
+				<slot />
+			</main>
+			<Footer />
+		</div>
+	</body>
+</html>
