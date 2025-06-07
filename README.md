@@ -71,34 +71,28 @@ pnpm test             # Run Playwright tests
 
 ## 🔧 Configuration
 
-### Environment Setup
+### Replace placeholder variables
 
-Create a `.env` file in the root directory:
-
-```env
-# Site Configuration
+#### Site Info (head/manifest.json)
 SITE_TITLE="Your Site Title"
 SITE_SHORT_TITLE="Short Title"
-SITE_DESCRIPTION="Your site description for SEO"
+SITE_DESCRIPTION="Your site description"
 SITE_LIVE_URL="https://yourdomain.com"
 SITE_TWITTER="@yourtwitterhandle"
 
-# Colors
+#### Colors
 THEME_COLOR="#your-theme-color"
 BG_COLOR="#your-background-color"
 
-# Categories for PWA
+#### Categories for PWA
 CATEGORY_1="productivity"
 CATEGORY_2="utilities"
-```
 
 ### Customization
 
-1. **Update manifest.json** - Replace placeholder values with your actual site information
 2. **Replace icons** - Add your custom icons in the `/public/icons/` directory
-3. **Fonts** - Replace the custom font in `/public/fonts/` and update the preload link
-4. **Colors** - Update theme colors in both manifest.json and html head
-5. **Content** - Modify pages in `/src/pages/` and components in `/src/components/`
+3. **Fonts** - Replace the custom font in `/public/fonts/` and update the preload link (if used)
+4. **Content** - Modify pages in `/src/pages/` and components in `/src/components/`
 
 ## 📱 PWA Features
 
@@ -107,7 +101,7 @@ This template includes a complete PWA setup:
 - **App Manifest** - Full configuration for installable web app
 - **Service Worker** - Caches /offline page and any images
 - **Touch Icons** - Apple touch icons for iOS devices
-- **Maskable Icons** - Android adaptive icon support
+- **Maskable Icons** - Adaptive icon support
 
 ### PWA Installation
 
@@ -149,16 +143,6 @@ pnpm build
 ```
 
 The `dist/` folder contains your production-ready static files.
-
-### Deployment Platforms
-
-This template works with any static hosting:
-
-- **Vercel**
-- **Netlify**
-- **GitHub Pages**
-- **Cloudflare Pages**
-- **AWS Amplify**
 
 ## 🤝 Contributing
 
