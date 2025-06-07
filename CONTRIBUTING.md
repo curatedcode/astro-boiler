@@ -86,8 +86,16 @@ docs/api-documentation-update
 4. **Commit your changes** using conventional commit format:
    ```bash
    git add .
-   git commit -m "feat: add user authentication system"
+   git commit -m "feat: add user authentication"
    ```
+
+### Commit Naming Conventions
+- New feature `feat: add user authentication`
+- Bug fix `fix: resolve memory leak in data processing`
+- Documentation only changes `docs: update API documentation`
+- Code change that neither fixes a bug nor adds a feature `refactor: convert variables to snake_case`
+- Changes to the build process or auxiliary tools `chore: update vite config`
+- Reverts a previous commit `revert: remove experimental feature`
 
 ## Coding Standards
 
