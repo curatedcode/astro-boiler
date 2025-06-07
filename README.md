@@ -1,59 +1,175 @@
-# Astro Starter Template 🚀  
+# Astro Boiler
 
-**Your ultimate starter for modern web development!**  
+A modern, performance-optimized web starter template built with Astro, Tailwind CSS, and Alpine.js. Features comprehensive SEO optimization, PWA capabilities, and developer-friendly tooling.
 
-### What's Included:  
-- **Astro**: The lightning-fast, modern framework for building web applications.  
-- **Tailwind CSS**: Utility-first styling for clean and responsive designs.  
-- **BiomeJS**: The ultimate formatter and linter that keeps your code squeaky clean.  
-- **Playwright**: End-to-end testing for robust and reliable applications.  
-- **AlpineJS**: Perfect for lightweight and declarative interactivity.  
-- **Service Worker**: Seamless offline experiences with caching capabilities.  
-- **PWA Support**: Comprehensive Progressive Web App setup, including Apple icons, favicons, manifest files, and more.  
+## ✨ Features
 
----
+- **🚀 Astro**
+- **🎨 TailwindCSS**
+- **⚡ Alpine.js**
+- **📱 PWA Ready**
+- **🔍 SEO Optimized**
+- **🎯 TypeScript**
 
-### Commands  
+## 🚀 Quick Start
 
-Here are some helpful commands to get started:  
+### Prerequisites
 
-#### Fork
+- Node.js 22+ 
+- pnpm
+
+### Installation
 
 ```bash
-git clone --depth 1 git@github.com:curatedcode/starter-v1.git MY_PROJECT && cd MY_PROJECT && rmdir /s /q .git && git init
+# Clone the repository
+git clone https://github.com/curatedcode/astro-boiler.git
+cd astro-boiler
+
+# Install dependencies
+pnpm install
+
+# Start development server
+pnpm dev
 ```
 
-#### Development  
-```bash  
-pnpm dev  
+Visit `http://localhost:3000` to see your site running locally.
+
+## 📁 Project Structure
+
+```
+astro-boiler/
+├── public/
+│   ├── icons/           # PWA and touch icons
+│   ├── fonts/           # Custom web fonts
+│   ├── favicon.svg      # Modern favicon
+│   ├── favicon.ico      # Legacy favicon fallback
+│   └── manifest.json    # PWA manifest
+├── src/
+│   ├── components/      # Reusable Astro components
+│   ├── layouts/         # Page layouts
+│   ├── pages/           # Route pages
+│   └── styles/          # Global styles
+├── tests/               # Playwright test files
+└── package.json
 ```
 
-Starts the development server on localhost:3000 with live-reloading enabled.
+## 🛠 Scripts
 
-#### Build
+```bash
+# Development
+pnpm dev              # Start dev server on localhost:3000
+pnpm build            # Build for production
+pnpm preview          # Preview production build
+
+# Code Quality
+pnpm lint             # Format code with Prettier
+pnpm lint:check       # Check code formatting
+
+# Testing
+pnpm test             # Run Playwright tests
+```
+
+## 🔧 Configuration
+
+### Environment Setup
+
+Create a `.env` file in the root directory:
+
+```env
+# Site Configuration
+SITE_TITLE="Your Site Title"
+SITE_SHORT_TITLE="Short Title"
+SITE_DESCRIPTION="Your site description for SEO"
+SITE_LIVE_URL="https://yourdomain.com"
+SITE_TWITTER="@yourtwitterhandle"
+
+# Colors
+THEME_COLOR="#your-theme-color"
+BG_COLOR="#your-background-color"
+
+# Categories for PWA
+CATEGORY_1="productivity"
+CATEGORY_2="utilities"
+```
+
+### Customization
+
+1. **Update manifest.json** - Replace placeholder values with your actual site information
+2. **Replace icons** - Add your custom icons in the `/public/icons/` directory
+3. **Fonts** - Replace the custom font in `/public/fonts/` and update the preload link
+4. **Colors** - Update theme colors in both manifest.json and html head
+5. **Content** - Modify pages in `/src/pages/` and components in `/src/components/`
+
+## 📱 PWA Features
+
+This template includes a complete PWA setup:
+
+- **App Manifest** - Full configuration for installable web app
+- **Service Worker** - Caches /offline page and any images
+- **Touch Icons** - Apple touch icons for iOS devices
+- **Maskable Icons** - Android adaptive icon support
+
+### PWA Installation
+
+Users can install your site as an app on:
+- **Desktop** - Chrome, Edge, Safari
+- **Mobile** - iOS Safari, Android Chrome
+- **Progressive Enhancement** - Works as website if PWA not supported
+
+## 🔍 SEO Optimization
+
+Comprehensive SEO setup included:
+
+- **Meta Tags** - Complete head tag optimization
+- **Open Graph** - Facebook, LinkedIn social sharing
+- **Twitter Cards** - Twitter social sharing with large images
+- **Robots Meta** - Search engine indexing enabled
+
+
+## 🧪 Testing
+
+Playwright testing setup includes:
+
+- **Cross-browser testing** - Chrome, Firefox, Safari
+- **Accessibility testing** - axe-core integration
+- **Mobile testing** - Responsive design validation
+- **Performance testing** - Core Web Vitals monitoring
+
+Run tests:
+```bash
+pnpm test              # Headless mode
+```
+
+## 🚀 Deployment
+
+### Build for Production
+
 ```bash
 pnpm build
 ```
 
-Runs the linter `pnpm lint` and builds the project for production.
+The `dist/` folder contains your production-ready static files.
 
-#### Preview
-```bash
-pnpm preview
-```
+### Deployment Platforms
 
-Serves the production build locally on localhost to preview your project.
+This template works with any static hosting:
 
-#### Testing
-```bash
-pnpm test
-```
+- **Vercel**
+- **Netlify**
+- **GitHub Pages**
+- **Cloudflare Pages**
+- **AWS Amplify**
 
-Runs Playwright tests to ensure end-to-end reliability of your application.
+## 🤝 Contributing
 
-#### Linting
-```bash
-pnpm lint
-```
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-Runs Biome to check and format your code.
+## 📄 License
+
+MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
