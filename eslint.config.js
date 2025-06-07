@@ -5,6 +5,7 @@ import astroParser from "astro-eslint-parser";
 import prettier from "eslint-config-prettier";
 import astro from "eslint-plugin-astro";
 import { defineConfig } from "eslint/config";
+import globals from "globals";
 
 const commonRules = {
   "no-console": "off",
@@ -12,7 +13,10 @@ const commonRules = {
   "no-duplicate-imports": "error",
   "no-empty": "error",
   "no-unused-vars": "off",
-  "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
+  "@typescript-eslint/no-unused-vars": [
+    "error",
+    { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
+  ],
   "no-var": "error",
   "prefer-const": "error",
   "prefer-template": "error",
@@ -99,6 +103,9 @@ export default defineConfig([
         parser: "@typescript-eslint/parser",
         extraFileExtensions: [".astro"],
       },
+      globals: {
+        astroHTML: "readonly",
+      },
     },
     plugins: {
       astro,
@@ -108,6 +115,23 @@ export default defineConfig([
       ...astro.configs.recommended.rules,
       ...commonRules,
     },
+  },
+  {
+    files: ["**/*.config.{js,ts}", "playwright.config.{js,ts}"],
+    languageOptions: {
+      globals: globals.node,
+    },
+    rules: commonRules,
+  },
+  {
+    files: ["public/serviceWorker.js"],
+    languageOptions: {
+      globals: {
+        ...globals.serviceworker,
+        workbox: "readonly",
+      },
+    },
+    rules: commonRules,
   },
   prettier,
 ]);
