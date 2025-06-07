@@ -15,7 +15,7 @@ A modern, performance-optimized web starter template built with Astro, Tailwind 
 
 ### Prerequisites
 
-- Node.js 22+ 
+- Node.js 22+
 - pnpm
 
 ### Installation
@@ -74,6 +74,7 @@ pnpm test             # Run Playwright tests
 ### Replace placeholder variables
 
 #### Site Info (head/manifest.json)
+
 SITE_TITLE="Your Site Title"
 SITE_SHORT_TITLE="Short Title"
 SITE_DESCRIPTION="Your site description"
@@ -81,10 +82,12 @@ SITE_LIVE_URL="https://yourdomain.com"
 SITE_TWITTER="@yourtwitterhandle"
 
 #### Colors
+
 THEME_COLOR="#your-theme-color"
 BG_COLOR="#your-background-color"
 
 #### Categories for PWA
+
 CATEGORY_1="productivity"
 CATEGORY_2="utilities"
 
@@ -106,6 +109,7 @@ This template includes a complete PWA setup:
 ### PWA Installation
 
 Users can install your site as an app on:
+
 - **Desktop** - Chrome, Edge, Safari
 - **Mobile** - iOS Safari, Android Chrome
 - **Progressive Enhancement** - Works as website if PWA not supported
@@ -119,7 +123,6 @@ Comprehensive SEO setup included:
 - **Twitter Cards** - Twitter social sharing with large images
 - **Robots Meta** - Search engine indexing enabled
 
-
 ## 🧪 Testing
 
 Playwright testing setup includes:
@@ -130,6 +133,7 @@ Playwright testing setup includes:
 - **Performance testing** - Core Web Vitals monitoring
 
 Run tests:
+
 ```bash
 pnpm test              # Headless mode
 ```

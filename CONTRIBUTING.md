@@ -41,9 +41,9 @@ Before contributing, ensure you have:
    pnpm install
    ```
 4. **Run the development server**:
-	```bash
-	pnpm dev
-	```
+   ```bash
+   pnpm dev
+   ```
 
 The application will be available at `http://localhost:3000`.
 
@@ -61,6 +61,7 @@ Use descriptive branch names with prefixes:
 - `test/description` - Test additions/updates
 
 Examples:
+
 ```bash
 feature/user-authentication
 bugfix/memory-leak-fix
@@ -70,6 +71,7 @@ docs/api-documentation-update
 ### Making Changes
 
 1. **Create a new branch** from `main`:
+
    ```bash
    git checkout main
    git pull upstream main
@@ -79,6 +81,7 @@ docs/api-documentation-update
 2. **Make your changes** following the coding standards below
 
 3. **Test your changes**:
+
    ```bash
    pnpm test
    ```
@@ -90,6 +93,7 @@ docs/api-documentation-update
    ```
 
 ### Commit Naming Conventions
+
 - New feature `feat: add user authentication`
 - Bug fix `fix: resolve memory leak in data processing`
 - Documentation only changes `docs: update API documentation`
@@ -137,6 +141,7 @@ pnpm test
 ### Before Submitting
 
 1. **Ensure your branch is up to date**:
+
    ```bash
    git fetch upstream
    git rebase upstream/main
@@ -151,17 +156,20 @@ pnpm test
 When creating a pull request, include:
 
 #### Description
+
 - Brief summary of changes
 - Motivation and context
 - Link to related issues
 
 #### Type of Change
+
 - [ ] Bug fix (non-breaking change which fixes an issue)
 - [ ] New feature (non-breaking change which adds functionality)
 - [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
 - [ ] Documentation update
 
 #### Checklist
+
 - [ ] Tests pass
 - [ ] Documentation updated
 
@@ -240,6 +248,7 @@ Thank you for contributing to Astro-Boiler! 🎉
 ---
 
 For questions or clarifications, please:
+
 - Check existing [GitHub Issues](https://github.com/curatedcode/astro-boiler/issues)
 - Start a [GitHub Discussion](https://github.com/curatedcode/astro-boiler/discussions)
 - Contact maintainers directly if needed

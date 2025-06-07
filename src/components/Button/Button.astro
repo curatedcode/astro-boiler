@@ -2,14 +2,14 @@
 import { type GetButtonClassArgs, getButtonClass } from "./getButtonClass";
 
 interface Props
-	extends astroHTML.JSX.ButtonHTMLAttributes,
-		GetButtonClassArgs {}
+  extends astroHTML.JSX.ButtonHTMLAttributes,
+    GetButtonClassArgs {}
 
 const { variant, class: className, size, ...props } = Astro.props;
 
 const buttonClass = getButtonClass({ variant, class: className, size });
 ---
 
-<button type="button" class={buttonClass} {...props}>
-	<slot />
+<button type='button' class={buttonClass} {...props}>
+  <slot />
 </button>

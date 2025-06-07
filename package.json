@@ -1,71 +1,72 @@
 {
-	"name": "astro-boiler",
-	"type": "module",
-	"version": "0.0.2",
-	"license": "MIT",
-	"author": {
-		"name": "Zackary Fotheringham",
-		"email": "me@zackaryf.com",
-		"url": "https://zackaryf.com"
-	},
-	"description": "My personal boilerplate setup with astro, tailwind, and some default icons for good platform support.",
-	"engines": {
-		"node": ">=22.16.0",
-		"pnpm": ">=10.11.1"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/curatedcode/astro-boiler.git"
-	},
-	"homepage": "https://github.com/curatedcode/astro-boiler",
-	"bugs": {
-		"url": "https://github.com/curatedcode/astro-boiler/issues"
-	},
-	"keywords": [
-		"astro",
-		"tailwindcss",
-		"alpinejs",
-		"typescript",
-		"web-development",
-		"starter-template"
-	],
-	"scripts": {
-		"dev": "astro dev --port=3000 --host",
-		"build": "pnpm lint && astro check && astro build",
-		"preview": "astro preview --host",
-		"astro": "astro",
-		"test": "playwright test",
-		"lint": "pnpm lint:fix && pnpm lint:format",
-		"lint:fix": "eslint . --fix",
-		"lint:format": "prettier --write .",
-		"lint:format:check": "prettier --check .",
-		"lint:check": "eslint . && pnpm lint:format:check",
-		"lint:eslint-only": "eslint ."
-	},
-	"dependencies": {
-		"@astrojs/alpinejs": "^0.4.8",
-		"@eslint/js": "^9.28.0",
-		"@lucide/astro": "^0.513.0",
-		"@tailwindcss/vite": "^4.1.8",
-		"alpinejs": "^3.14.9",
-		"astro": "^5.9.0",
-		"tailwindcss": "^4.1.8"
-	},
-	"devDependencies": {
-		"@astrojs/check": "^0.9.4",
-		"@axe-core/playwright": "^4.10.2",
-		"@playwright/test": "^1.52.0",
-		"@types/alpinejs": "^3.13.11",
-		"@types/node": "^22.15.30",
-		"@typescript-eslint/eslint-plugin": "^8.33.1",
-		"@typescript-eslint/parser": "^8.33.1",
-		"astro-eslint-parser": "^1.2.2",
-		"eslint": "^9.28.0",
-		"eslint-config-prettier": "^10.1.5",
-		"eslint-plugin-astro": "^1.3.1",
-		"eslint-plugin-prettier": "^5.4.1",
-		"prettier": "3.5.3",
-		"prettier-plugin-astro": "0.14.1",
-		"typescript": "^5.8.3"
-	}
+  "name": "astro-boiler",
+  "type": "module",
+  "version": "0.0.2",
+  "license": "MIT",
+  "author": {
+    "name": "Zackary Fotheringham",
+    "email": "me@zackaryf.com",
+    "url": "https://zackaryf.com"
+  },
+  "description": "My personal boilerplate setup with astro, tailwind, and some default icons for good platform support.",
+  "engines": {
+    "node": ">=22.16.0",
+    "pnpm": ">=10.11.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/curatedcode/astro-boiler.git"
+  },
+  "homepage": "https://github.com/curatedcode/astro-boiler",
+  "bugs": {
+    "url": "https://github.com/curatedcode/astro-boiler/issues"
+  },
+  "keywords": [
+    "astro",
+    "tailwindcss",
+    "alpinejs",
+    "typescript",
+    "web-development",
+    "starter-template"
+  ],
+  "scripts": {
+    "dev": "astro dev --port=3000 --host",
+    "build": "pnpm lint && astro check && astro build",
+    "preview": "astro preview --host",
+    "astro": "astro",
+    "test": "playwright test",
+    "lint": "pnpm lint:fix && pnpm lint:format",
+    "lint:fix": "eslint . --fix",
+    "lint:format": "prettier --write .",
+    "lint:format:check": "prettier --check .",
+    "lint:check": "eslint . && pnpm lint:format:check",
+    "lint:eslint-only": "eslint ."
+  },
+  "dependencies": {
+    "@astrojs/alpinejs": "^0.4.8",
+    "@eslint/js": "^9.28.0",
+    "@lucide/astro": "^0.513.0",
+    "@tailwindcss/vite": "^4.1.8",
+    "alpinejs": "^3.14.9",
+    "astro": "^5.9.0",
+    "tailwindcss": "^4.1.8"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@axe-core/playwright": "^4.10.2",
+    "@playwright/test": "^1.52.0",
+    "@types/alpinejs": "^3.13.11",
+    "@types/node": "^22.15.30",
+    "@typescript-eslint/eslint-plugin": "^8.33.1",
+    "@typescript-eslint/parser": "^8.33.1",
+    "astro-eslint-parser": "^1.2.2",
+    "eslint": "^9.28.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-astro": "^1.3.1",
+    "eslint-plugin-prettier": "^5.4.1",
+    "globals": "^16.2.0",
+    "prettier": "3.5.3",
+    "prettier-plugin-astro": "0.14.1",
+    "typescript": "^5.8.3"
+  }
 }
