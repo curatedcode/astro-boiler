@@ -38,10 +38,45 @@ const commonRules = {
   "@typescript-eslint/no-use-before-define": "error",
 };
 
+const commonIgnoreFiles = [
+  "node_modules/",
+  "pnpm-lock.yaml",
+  "package-lock.json",
+  "yarn.lock",
+  "dist/",
+  "build/",
+  ".output/",
+  ".vercel/",
+  ".netlify/",
+  ".astro/",
+  ".env",
+  ".env.local",
+  ".env.development.local",
+  ".env.test.local",
+  ".env.production.local",
+  ".vscode/",
+  ".idea/",
+  "*.swp",
+  "*.swo",
+  ".DS_Store",
+  "Thumbs.db",
+  "*.log",
+  "logs/",
+  ".cache/",
+  ".parcel-cache/",
+  ".next/",
+  ".nuxt/",
+  "coverage/",
+  "*.lcov",
+  "*.tmp",
+  "*.temp",
+];
+
 export default defineConfig([
   js.configs.recommended,
   {
     files: ["**/*.{js,mjs,cjs,jsx,ts,tsx}"],
+    ignores: commonIgnoreFiles,
     languageOptions: {
       parser: typescriptParser,
       ecmaVersion: "latest",
@@ -57,6 +92,7 @@ export default defineConfig([
   },
   {
     files: ["**/*.astro"],
+    ignores: commonIgnoreFiles,
     languageOptions: {
       parser: astroParser,
       parserOptions: {
