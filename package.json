@@ -1,41 +1,57 @@
 {
-	"name": "starter-v1",
+	"name": "starter-v2",
 	"type": "module",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"license": "MIT",
-	"author": "Your Name me@starter-v1.com",
+	"author": {
+		"name": "Zackary Fotheringham",
+		"email": "me@zackaryf.com",
+		"url": "https://zackaryf.com"
+	},
+	"description": "My personal boilerplate setup with astro, tailwind, and some default icons for good platform support.",
+	"engines": {
+		"node": ">=22.16.0",
+		"pnpm": ">=10.11.1"
+	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/curatedcode/starter-v1.git"
+		"url": "https://github.com/curatedcode/starter-v2.git"
 	},
-	"homepage": "https://starter-v1.com",
+	"homepage": "https://github.com/curatedcode/starter-v2",
 	"bugs": {
-		"url": "https://github.com/curatedcode/starter-v1/issues"
+		"url": "https://github.com/curatedcode/starter-v2/issues"
 	},
 	"keywords": [
-		"astro"
+		"astro",
+		"tailwindcss",
+		"alpinejs",
+		"typescript",
+		"web-development",
+		"starter-template"
 	],
 	"scripts": {
 		"dev": "astro dev --port=3000 --host",
-		"build": "pnpm lint && astro build",
+		"build": "pnpm lint && astro check && astro build",
 		"preview": "astro preview --host",
 		"astro": "astro",
 		"test": "playwright test",
-		"lint": "pnpm exec prettier . --write"
+		"lint": "pnpm exec prettier . --write",
+		"lint:check": "pnpm exec prettier . --check"
 	},
 	"dependencies": {
-		"@astrojs/alpinejs": "^0.4.6",
+		"@astrojs/alpinejs": "^0.4.8",
 		"@lucide/astro": "^0.513.0",
-		"@tailwindcss/vite": "^4.1.4",
+		"@tailwindcss/vite": "^4.1.8",
 		"alpinejs": "^3.14.9",
-		"astro": "^5.7.4",
-		"tailwindcss": "^4.1.4"
+		"astro": "^5.9.0",
+		"tailwindcss": "^4.1.8"
 	},
 	"devDependencies": {
-		"@axe-core/playwright": "^4.10.1",
+		"@astrojs/check": "^0.9.4",
+		"@axe-core/playwright": "^4.10.2",
 		"@playwright/test": "^1.52.0",
 		"@types/alpinejs": "^3.13.11",
-		"@types/node": "^22.14.1",
+		"@types/node": "^22.15.30",
 		"prettier": "3.5.3",
 		"prettier-plugin-astro": "0.14.1",
 		"typescript": "^5.8.3"
