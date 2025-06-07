@@ -1,7 +1,7 @@
 ---
-import { Bars3Icon, XMarkIcon } from "../Icons";
-import MobileNavLink from "./MobileNavLink.astro";
-import NavLink from "./NavLink.astro";
+import { Menu, X } from "@lucide/astro";
+import MobileNavLink from "~/components/Navbar/MobileNavLink.astro";
+import NavLink from "~/components/Navbar/NavLink.astro";
 ---
 
 <nav
@@ -10,18 +10,15 @@ import NavLink from "./NavLink.astro";
 >
 	<div class="container mx-auto px-4 flex justify-between items-center pb-4">
 		<a href="/" class="flex items-center">
-			<span class="text-3xl font-handwritten font-bold text-custom-brown"
-				>The Cookie Cottage</span
-			>
+			<span class="text-3xl font-bold">SITE_TITLE</span>
 		</a>
 
 		<!-- Desktop Menu -->
 		<div class="hidden md:flex space-x-8">
 			<NavLink href="/">Home</NavLink>
 			<NavLink href="/about">About Us</NavLink>
-			<NavLink href="/products">Products</NavLink>
 			<NavLink href="/blog">Blog</NavLink>
-			<NavLink href="/contact">Order/Contact</NavLink>
+			<NavLink href="/contact">Contact</NavLink>
 			<NavLink href="/faq">FAQ</NavLink>
 		</div>
 
@@ -31,8 +28,8 @@ import NavLink from "./NavLink.astro";
 			@click="isMenuOpen = !isMenuOpen"
 			aria-label="Toggle menu"
 		>
-			<Bars3Icon x-show="!isMenuOpen" aria-hidden="true" />
-			<XMarkIcon x-show="isMenuOpen" aria-hidden="true" />
+			<Menu x-show="!isMenuOpen" aria-hidden="true" />
+			<X x-show="isMenuOpen" aria-hidden="true" />
 		</button>
 	</div>
 
@@ -53,14 +50,11 @@ import NavLink from "./NavLink.astro";
 			<MobileNavLink href="/about" @click="isMenuOpen = false"
 				>About Us</MobileNavLink
 			>
-			<MobileNavLink href="/products" @click="isMenuOpen = false"
-				>Products</MobileNavLink
-			>
-			<MobileNavLink href="/contact" @click="isMenuOpen = false"
-				>Order/Contact</MobileNavLink
-			>
 			<MobileNavLink href="/blog" @click="isMenuOpen = false"
 				>Blog</MobileNavLink
+			>
+			<MobileNavLink href="/contact" @click="isMenuOpen = false"
+				>Contact</MobileNavLink
 			>
 			<MobileNavLink href="/faq" @click="isMenuOpen = false">FAQ</MobileNavLink>
 		</div>

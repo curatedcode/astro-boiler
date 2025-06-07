@@ -11,6 +11,9 @@ importers:
       '@astrojs/alpinejs':
         specifier: ^0.4.6
         version: 0.4.6(@types/alpinejs@3.13.11)(alpinejs@3.14.9)
+      '@lucide/astro':
+        specifier: ^0.513.0
+        version: 0.513.0(astro@5.7.4(@types/node@22.14.1)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.40.0)(typescript@5.8.3))
       '@tailwindcss/vite':
         specifier: ^4.1.4
         version: 4.1.4(vite@6.3.2(@types/node@22.14.1)(jiti@2.4.2)(lightningcss@1.29.2))
@@ -356,6 +359,11 @@ packages:
 
   '@jridgewell/sourcemap-codec@1.5.0':
     resolution: {integrity: sha512-gv3ZRaISU3fjPAgNsriBRqGWQL6quFx04YMPW/zD8XMLsU32mhCCbfbO6KZFLjvYpCZ8zyDEgqsgf+PwPaM7GQ==}
+
+  '@lucide/astro@0.513.0':
+    resolution: {integrity: sha512-UFXmRjELW8q/Npc0Yfm5Oqer+kPnetbPK39vJ7LcsfHtMCZx2gZG/YNMnjHDhk2QHScClgo8RmQrf8xQZG99dA==}
+    peerDependencies:
+      astro: ^4 || ^5
 
   '@oslojs/encoding@1.1.0':
     resolution: {integrity: sha512-70wQhgYmndg4GCPxPPxPGevRKqTIJ2Nh4OkiMWmDAVYsTQ+Ta7Sq+rPevXyXGdzr30/qZBnyOalCszoMxlyldQ==}
@@ -1948,6 +1956,10 @@ snapshots:
     optional: true
 
   '@jridgewell/sourcemap-codec@1.5.0': {}
+
+  '@lucide/astro@0.513.0(astro@5.7.4(@types/node@22.14.1)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.40.0)(typescript@5.8.3))':
+    dependencies:
+      astro: 5.7.4(@types/node@22.14.1)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.40.0)(typescript@5.8.3)
 
   '@oslojs/encoding@1.1.0': {}
 
