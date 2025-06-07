@@ -1,0 +1,48 @@
+# Dependencies
+node_modules/
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Build outputs
+dist/
+build/
+.output/
+.vercel/
+.netlify/
+
+# Astro specific
+.astro/
+
+# Generated files
+*.min.js
+*.min.css
+
+# Large data files
+*.json
+!package.json
+!tsconfig.json
+!*.config.json
+
+# Documentation that shouldn't be formatted
+CHANGELOG.md
+LICENSE
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+
+# Logs
+*.log
+
+# Coverage reports
+coverage/
+
+# Cache directories
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
