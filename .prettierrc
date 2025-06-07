@@ -18,7 +18,10 @@
     {
       "files": "*.astro",
       "options": {
-        "parser": "astro"
+        "parser": "astro",
+        "singleQuote": false,
+        "jsxSingleQuote": false,
+        "quoteProps": "consistent"
       }
     }
   ]
