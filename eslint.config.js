@@ -118,6 +118,7 @@ export default defineConfig([
   },
   {
     files: ["**/*.config.{js,ts}", "playwright.config.{js,ts}"],
+    ignores: commonIgnoreFiles,
     languageOptions: {
       globals: globals.node,
     },
@@ -125,6 +126,7 @@ export default defineConfig([
   },
   {
     files: ["public/serviceWorker.js"],
+    ignores: commonIgnoreFiles,
     languageOptions: {
       globals: {
         ...globals.serviceworker,
