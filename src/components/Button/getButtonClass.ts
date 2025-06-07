@@ -1,13 +1,13 @@
 export type GetButtonClassArgs = {
 	variant?: "outline" | "solid" | "ghost";
 	size?: "default" | "sm" | "icon" | "lg";
-	class?: string | undefined | null;
+	class?: string | null | undefined;
 };
 
 export function getButtonClass({
 	variant,
 	size,
-	class: userClass,
+	class: className,
 }: GetButtonClassArgs) {
 	const baseClass =
 		"inline-flex h-10 px-4 py-2 items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition focus-visible:outline-1 focus-visible:outline-black focus-visible:outline-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0";
@@ -37,10 +37,10 @@ export function getButtonClass({
 
 	const mergedClass =
 		variant === "outline"
-			? `${baseClass} ${outlineClass} ${sizeClass} ${userClass}`
+			? `${baseClass} ${outlineClass} ${sizeClass} ${className}`
 			: variant === "ghost"
-				? `${baseClass} ${ghostClass} ${sizeClass} ${userClass}`
-				: `${baseClass} ${solidClass} ${sizeClass} ${userClass}`;
+				? `${baseClass} ${ghostClass} ${sizeClass} ${className}`
+				: `${baseClass} ${solidClass} ${sizeClass} ${className}`;
 
 	return mergedClass;
 }

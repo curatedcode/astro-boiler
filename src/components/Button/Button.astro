@@ -5,9 +5,9 @@ interface Props
 	extends astroHTML.JSX.ButtonHTMLAttributes,
 		GetButtonClassArgs {}
 
-const { variant, class: userClass, size, ...props } = Astro.props;
+const { variant, class: className, size, ...props } = Astro.props;
 
-const buttonClass = getButtonClass({ variant, class: userClass, size });
+const buttonClass = getButtonClass({ variant, class: className, size });
 ---
 
 <button type="button" class={buttonClass} {...props}>
