@@ -1,5 +1,5 @@
 {
-	"name": "starter-v2",
+	"name": "astro-boiler",
 	"type": "module",
 	"version": "0.0.2",
 	"license": "MIT",
@@ -15,11 +15,11 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/curatedcode/starter-v2.git"
+		"url": "https://github.com/curatedcode/astro-boiler.git"
 	},
-	"homepage": "https://github.com/curatedcode/starter-v2",
+	"homepage": "https://github.com/curatedcode/astro-boiler",
 	"bugs": {
-		"url": "https://github.com/curatedcode/starter-v2/issues"
+		"url": "https://github.com/curatedcode/astro-boiler/issues"
 	},
 	"keywords": [
 		"astro",
