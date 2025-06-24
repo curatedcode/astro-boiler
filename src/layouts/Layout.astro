@@ -1,7 +1,7 @@
 ---
+import { Navbar } from "~/components/navbar";
 import Footer from "~/components/Footer.astro";
-import Navbar from "~/components/Navbar";
-import "~/styles/global.css";
+import "~/styles/globals.css";
 
 interface Props {
   title?: string;
@@ -30,7 +30,7 @@ const pageTitle = title ? `${title} - SITE_TITLE` : "SITE_TITLE";
     <meta name="description" content="SITE_DESCRIPTION" />
     <link rel="manifest" href="/manifest.json" />
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
     <title>{pageTitle}</title>
@@ -40,11 +40,14 @@ const pageTitle = title ? `${title} - SITE_TITLE` : "SITE_TITLE";
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@SITE_TWITTER" />
-    <meta name="twitter:url" content="SITE_LIVE_URL" />
     <meta name="twitter:title" content="SITE_TITLE" />
     <meta name="twitter:description" content="SITE_DESCRIPTION" />
-    <meta name="twitter:image" content="SITE_LIVE_URL/icons/twitter-card.png" />
+    <meta name="twitter:site:id" content="722408900213874688" />
+    <meta name="twitter:creator" content="@IAmNotZack" />
+    <meta
+      name="twitter:image"
+      content="SITE_LIVE_URL/assets/icons/twitter-card.png"
+    />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -52,7 +55,10 @@ const pageTitle = title ? `${title} - SITE_TITLE` : "SITE_TITLE";
     <meta property="og:description" content="SITE_DESCRIPTION" />
     <meta property="og:site_name" content="SITE_TITLE" />
     <meta property="og:url" content="SITE_LIVE_URL" />
-    <meta property="og:image" content="SITE_LIVE_URL/icons/twitter-card.png" />
+    <meta
+      property="og:image"
+      content="SITE_LIVE_URL/assets/icons/twitter-card.png"
+    />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="en_US" />
@@ -64,23 +70,23 @@ const pageTitle = title ? `${title} - SITE_TITLE` : "SITE_TITLE";
     <link
       rel="apple-touch-icon"
       sizes="120x120"
-      href="/icons/apple-touch-icon-120x120.png"
+      href="/assets/icons/apple-touch-icon-120x120.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="152x152"
-      href="/icons/apple-touch-icon-152x152.png"
+      href="/assets/icons/apple-touch-icon-152x152.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="/icons/apple-touch-icon-180x180.png"
+      href="/assets/icons/apple-touch-icon-180x180.png"
     />
 
     <!-- Fonts -->
     <link
       rel="preload"
-      href="/fonts/CUSTOM_FONT.woff2"
+      href="/assets/fonts/inter-v19-latin-500.woff2"
       as="font"
       type="font/woff2"
       crossorigin="anonymous"
@@ -96,8 +102,8 @@ const pageTitle = title ? `${title} - SITE_TITLE` : "SITE_TITLE";
         });
       }
     </script>
-    <div class="flex flex-col min-h-screen">
-      <Navbar />
+    <div class="flex min-h-screen flex-col">
+      <Navbar pathname={Astro.url.pathname} />
       <main class={className}>
         <slot />
       </main>

@@ -2,9 +2,9 @@ import js from "@eslint/js";
 import typescript from "@typescript-eslint/eslint-plugin";
 import typescriptParser from "@typescript-eslint/parser";
 import astroParser from "astro-eslint-parser";
+import { defineConfig } from "eslint/config";
 import prettier from "eslint-config-prettier";
 import astro from "eslint-plugin-astro";
-import { defineConfig } from "eslint/config";
 import globals from "globals";
 
 const commonRules = {
@@ -39,7 +39,6 @@ const commonRules = {
   "prefer-promise-reject-errors": "error",
   yoda: "error",
   "@typescript-eslint/no-shadow": "error",
-  "@typescript-eslint/no-use-before-define": "error",
 };
 
 export default defineConfig([
@@ -88,6 +87,7 @@ export default defineConfig([
       parserOptions: {
         project: "./tsconfig.json",
       },
+      globals: globals.node,
     },
     plugins: {
       "@typescript-eslint": typescript,

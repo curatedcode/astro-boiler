@@ -1,14 +1,14 @@
 ---
-import { getButtonClass } from "~/components/Button/getButtonClass";
+import { buttonVariants } from "~/components/ui/button";
 import Layout from "~/layouts/Layout.astro";
 ---
 
 <Layout title="404">
   <div class="flex items-center justify-center">
-    <div class="text-center pt-48">
-      <h1 class="text-5xl font-bold mb-4">404</h1>
-      <p class="text-xl mb-4">Oops! Page not found</p>
-      <a href="/" class={getButtonClass({ variant: "solid" })}> Return Home </a>
+    <div class="pt-48 text-center">
+      <h1 class="mb-4 text-5xl font-bold">404</h1>
+      <p class="mb-4 text-xl">Oops! Page not found</p>
+      <a href="/" class={buttonVariants()}> Return Home </a>
     </div>
   </div>
 </Layout>
