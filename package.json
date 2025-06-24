@@ -34,7 +34,9 @@
     "build": "pnpm lint && astro check && astro build",
     "preview": "astro preview --host",
     "astro": "astro",
-    "test": "playwright test",
+    "test": "pnpm vitest run && pnpm test:e2e",
+    "test:unit": "vitest",
+    "test:e2e": "playwright test",
     "lint": "pnpm lint:fix && pnpm lint:format",
     "lint:fix": "eslint . --fix",
     "lint:format": "prettier --write .",
@@ -67,6 +69,7 @@
     "globals": "^16.2.0",
     "prettier": "3.5.3",
     "prettier-plugin-astro": "0.14.1",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
   }
 }
