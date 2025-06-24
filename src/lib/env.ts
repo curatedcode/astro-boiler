@@ -14,7 +14,7 @@ const envSchema = z.object({
    */
   PW_TESTING_PORT: z.preprocess(
     (val) => (typeof val === "string" ? Number.parseInt(val, 10) : val),
-    z.number()
+    z.number(),
   ),
   NODE_ENV: z
     .enum(["development", "test", "production"])

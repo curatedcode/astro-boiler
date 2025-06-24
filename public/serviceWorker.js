@@ -1,5 +1,5 @@
 importScripts(
-  "https://storage.googleapis.com/workbox-cdn/releases/6.2.0/workbox-sw.js"
+  "https://storage.googleapis.com/workbox-cdn/releases/6.2.0/workbox-sw.js",
 );
 
 workbox.setConfig({ debug: true });
@@ -24,7 +24,7 @@ registerRoute(
         statuses: [200],
       }),
     ],
-  })
+  }),
 );
 
 // Cache Google Fonts
@@ -35,7 +35,7 @@ registerRoute(
   new StaleWhileRevalidate({
     cacheName: "pwa-google-fonts",
     plugins: [new ExpirationPlugin({ maxEntries: 20 })],
-  })
+  }),
 );
 
 // Cache Images
@@ -52,7 +52,7 @@ registerRoute(
         maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
       }),
     ],
-  })
+  }),
 );
 
 // Cache CSS, JS, Manifest, and Web Worker
@@ -73,7 +73,7 @@ registerRoute(
         maxAgeSeconds: 24 * 60 * 60, // 24 hours
       }),
     ],
-  })
+  }),
 );
 
 // Catch routing errors, like if the user is offline

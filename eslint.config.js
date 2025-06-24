@@ -25,8 +25,8 @@ const commonRules = {
   "arrow-body-style": ["error", "as-needed"],
   "prefer-destructuring": ["error", { array: false, object: true }],
   "no-implicit-coercion": "error",
-  eqeqeq: ["error", "always"],
-  curly: ["error", "all"],
+  "eqeqeq": ["error", "always"],
+  "curly": ["error", "all"],
   "dot-notation": "error",
   "no-else-return": "error",
   "no-empty-function": "error",
@@ -37,7 +37,7 @@ const commonRules = {
   "no-unused-expressions": "error",
   "no-useless-return": "error",
   "prefer-promise-reject-errors": "error",
-  yoda: "error",
+  "yoda": "error",
   "@typescript-eslint/no-shadow": "error",
 };
 
