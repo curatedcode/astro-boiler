@@ -11,9 +11,6 @@ importers:
       '@astrojs/alpinejs':
         specifier: ^0.4.8
         version: 0.4.8(@types/alpinejs@3.13.11)(alpinejs@3.14.9)
-      '@eslint/js':
-        specifier: ^9.28.0
-        version: 9.28.0
       '@lucide/astro':
         specifier: ^0.513.0
         version: 0.513.0(astro@5.9.1(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.42.0)(typescript@5.8.3)(yaml@2.8.0))
@@ -36,6 +33,9 @@ importers:
       '@axe-core/playwright':
         specifier: ^4.10.2
         version: 4.10.2(playwright-core@1.52.0)
+      '@eslint/js':
+        specifier: ^9.28.0
+        version: 9.28.0
       '@playwright/test':
         specifier: ^1.52.0
         version: 1.52.0
